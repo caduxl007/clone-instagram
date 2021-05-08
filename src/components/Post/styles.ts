@@ -37,7 +37,7 @@ export const NameUserPost = styled.Text`
 export const ImagePost = styled.Image`
   margin-top: 5px;
   width: 100%;
-  height: 500px;
+  height: 450px;
 `;
 
 export const IconsOptionsPost = styled.View`

@@ -20,13 +20,7 @@ export function Post() {
     <Container>
       <HeaderPost>
         <BorderImagePerfil
-          colors={[
-            '#fed373',
-            '#f15245',
-            '#d92e7f',
-            '#9b36b7',
-            '#515ecf',
-          ]}
+          colors={['#fed373', '#f15245', '#d92e7f', '#9b36b7', '#515ecf']}
         >
           <ImagePerfil
             source={{
@@ -44,7 +38,8 @@ export function Post() {
       </HeaderPost>
       <ImagePost
         source={{
-          uri: 'https://avatars.githubusercontent.com/u/69374299?v=4',
+          uri:
+            'https://desafiosdaeducacao.grupoa.com.br/wp-content/uploads/2017/07/instagram-1581266_960_720.jpg',
         }}
       />
       <IconsOptionsPost>
