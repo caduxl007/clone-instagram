@@ -11,8 +11,9 @@ export const Header = styled.View`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 5px;
-  margin-top: ${getStatusBarHeight() + 10};
+  padding: 0 10px;
+  margin-top: ${getStatusBarHeight() + 10}px;
+  margin-bottom: 4px;
 `;
 
 export const Logo = styled.Image`
@@ -59,3 +60,7 @@ export const Name = styled.Text`
   color: white;
   font-size: 10px;
 `;
+
+export const ContentPosts = styled.View``;
+
+

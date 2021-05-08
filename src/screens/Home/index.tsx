@@ -15,7 +15,9 @@ import {
   BorderPhoto,
   Photo,
   Name,
+  ContentPosts,
 } from './styles';
+import { Post } from '../../components/Post';
 
 export function Home() {
   return (
@@ -24,154 +26,174 @@ export function Home() {
         <Header>
           <Logo source={LogoImg} />
           <IconsHeader>
-            <FontAwesome5 name="heart" size={22} color="white" />
-            <FontAwesome5 name="heart" size={22} color="white" />
+            <FontAwesome5
+              name="heart"
+              size={22}
+              color="white"
+              style={{ marginRight: 15 }}
+            />
+            <FontAwesome5
+              name="heart"
+              size={22}
+              color="white"
+              style={{ marginRight: 15 }}
+            />
             <FontAwesome5 name="facebook-messenger" size={22} color="white" />
           </IconsHeader>
         </Header>
         <Content>
-          <ContentUserStories>
-            <ScrollView
-              collapsable={false}
-              showsHorizontalScrollIndicator={false}
-              horizontal
-            >
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
+          <ScrollView style={{ flex: 1}} showsHorizontalScrollIndicator={false}>
+            <ContentUserStories>
+              <ScrollView
+                collapsable={false}
+                showsHorizontalScrollIndicator={false}
+                horizontal
+              >
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
 
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
 
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-              <UserStorie>
-                <BorderPhoto>
-                  <Photo
-                    source={{
-                      uri:
-                        'https://avatars.githubusercontent.com/u/69374299?v=4',
-                    }}
-                  />
-                </BorderPhoto>
-                <Name>Seu story</Name>
-              </UserStorie>
-            </ScrollView>
-          </ContentUserStories>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+                <UserStorie>
+                  <BorderPhoto>
+                    <Photo
+                      source={{
+                        uri:
+                          'https://avatars.githubusercontent.com/u/69374299?v=4',
+                      }}
+                    />
+                  </BorderPhoto>
+                  <Name>Seu story</Name>
+                </UserStorie>
+              </ScrollView>
+            </ContentUserStories>
+
+            <ContentPosts>
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+            </ContentPosts>
+          </ScrollView>
         </Content>
       </Container>
     </SafeAreaView>
