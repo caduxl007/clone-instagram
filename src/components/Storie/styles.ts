@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   align-items: center;
-  margin-right: 15px;
+  margin: 0 8px;
 `;
 
 export const BorderPhoto = styled.View`

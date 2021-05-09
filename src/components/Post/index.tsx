@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 import {
@@ -14,8 +14,28 @@ import {
   TextPost,
   TextHour,
 } from './styles';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 export function Post() {
+  const [isLiked, setIsLiked] = useState(false);
+  const [countTouch, setCountTouch] = useState(1);
+
+  const toggleLiked = useCallback(() => {
+    setIsLiked(oldValue => !oldValue);
+  }, []);
+
+  const handleLiked = useCallback(() => {
+    setCountTouch(oldValue => oldValue + 1);
+
+    if (countTouch == 2) {
+      setIsLiked(true);
+    }
+
+    setTimeout(() => {
+      setCountTouch(1);
+    }, 1500);
+  }, [countTouch]);
+
   return (
     <Container>
       <HeaderPost>
@@ -36,18 +56,22 @@ export function Post() {
           style={{ marginLeft: 'auto' }}
         />
       </HeaderPost>
-      <ImagePost
-        source={{
-          uri:
-            'https://desafiosdaeducacao.grupoa.com.br/wp-content/uploads/2017/07/instagram-1581266_960_720.jpg',
-        }}
-      />
+      <TouchableWithoutFeedback onPress={handleLiked}>
+        <ImagePost
+          source={{
+            uri:
+              'https://desafiosdaeducacao.grupoa.com.br/wp-content/uploads/2017/07/instagram-1581266_960_720.jpg',
+          }}
+        />
+      </TouchableWithoutFeedback>
       <IconsOptionsPost>
         <FontAwesome5
+          solid={isLiked}
           name="heart"
           size={22}
-          color="white"
+          color={isLiked ? 'red' : 'white'}
           style={{ marginRight: 15 }}
+          onPress={toggleLiked}
         />
         <FontAwesome5
           name="comment"
