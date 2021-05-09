@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/core';
 
 import {
   Container,
@@ -14,11 +16,12 @@ import {
   TextPost,
   TextHour,
 } from './styles';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 export function Post() {
   const [isLiked, setIsLiked] = useState(false);
   const [countTouch, setCountTouch] = useState(1);
+
+  const navigation = useNavigation();
 
   const toggleLiked = useCallback(() => {
     setIsLiked(oldValue => !oldValue);
@@ -35,6 +38,10 @@ export function Post() {
       setCountTouch(1);
     }, 1500);
   }, [countTouch]);
+
+  const navigateForComments = useCallback(() => {
+    navigation.navigate('Comments');
+  }, [navigation]);
 
   return (
     <Container>
@@ -78,6 +85,7 @@ export function Post() {
           size={22}
           color="white"
           style={{ marginRight: 15 }}
+          onPress={navigateForComments}
         />
         <FontAwesome5
           name="paper-plane"

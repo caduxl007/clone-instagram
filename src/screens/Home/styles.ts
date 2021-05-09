@@ -34,7 +34,7 @@ export const ContentUserStories = styled.View`
   flex: 1;
   margin-top: 20px;
   padding-bottom: 8px;
-  border-bottom-width: 0.2px;
+  border-bottom-width: 1px;
   border-bottom-color: #444;
 `;
 
